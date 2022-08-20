@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bhoomit Ganatra</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+    <body>
+        <div id="container--main">
+
+            <section id="wrapper--hero" class="section--page">
+                <img id="profile-pic" src="./assets/images/profile_pic.JPG">
+
+                <div>
+                    <h1 id="user-name">Bhoomit Ganatra</h1>
+                    <p id="bio">Software developer, <a href="https://www.yudiz.com/" target="_blank">@Yudiz</a>.</p>
+                    <a href="mailto:bhoomit.dev@gmail.com">👉 bhoomit.dev@gmail.com</a>
+                </div>  
+            </section>
+
+            <section class="section--page">
+        
+                <div id="socials--list">
+                    <a href="https://www.upwork.com/freelancers/~01d62cbe58c2a02090">Hire me</a>
+                    <a href="https://www.linkedin.com/in/bhoomit-ganatra/" target="_blank">Linkedin</a>
+                    <a href="https://github.com/bhumit070/" target="_blank">Github</a>
+                    <a href="https://twitter.com/bhumit070" target="_blank">Twitter</a>
+                </div>
+            </section>
+
+            <section class="section--page">
+                <h2>Skills & Qualifications</h2>
+                <ul id="qualifications--list">
+                    <li>✔️ <span id="experience-years"></span> Years experience with front & backend development</li>
+                    <li>✔️ Extensive knowledge in API & Database Design.</li>
+                </ul>
+            </section>
+
+            <section class="section--page">
+                <h2>Tech stack</h2>
+
+                <div id="wrapper--techstack__items">
+                    <div class="card--techstack"><span>JavaScript, Typescript, NodeJS</span></div>
+                    <div class="card--techstack"><span>Express, NestJs</span></div>
+                    <div class="card--techstack"><span>Postgres, MongoDB, MySQL</span></div>
+                    <div class="card--techstack"><span>React, Vue, Nuxt</span></div>
+                    <div class="card--techstack"><span>Vim, VsCode, Postman</span></div>
+                </div>
+            </section>
+
+            <section id="work-history-wrapper" class="section--page">
+                <h2>Work History</h2>
+
+                <div class="line-break"></div>
+                <div class="card--work-history">
+                    <strong>🚧 Software Developer | Yudiz</strong>
+                    <p>02/2022 - Present</p>
+                    <p>Worked on different different projects as per client requirement.</p>
+                    <ul>
+                        <li>Created <b>admin panel</b> backend for a <b> 2d shooter game </b> + Logic for <b> earning system </b> for that game</li>
+                        <li> Worked with <b> MicroServices </b> based application with <b>nodejs</b> and <b>typescript</b> </li>
+                        <li>Write frontend Logics for a <b>rental app</b> in <b>vue js</b>.</li>
+                        <li> Worked on <b>existing backend</b> for an application (<b>PERN stack</b>) & modify <b>admin panel</b> built in react. </li>
+                    </ul>
+                </div>
+
+                <div class="line-break"></div>
+
+                <div class="card--work-history">
+                    <strong>🚧 Software Developer | IncipientInfo</strong>
+                    <p>12/2020 - 02/2022</p>
+                    <p>Worked on different different projects as per client requirement.</p>
+                    <ul>
+                        <li>Built <b>Apis</b> in NodeJs </li>
+                        <li> Created <b>PWA ( Progressive Web App) </b> for some projects </li>
+                        <li> Worked with <b>graphql</b> </li>
+                    </ul>
+                </div>
+
+                <div class="line-break"></div>
+
+                <div class="line-break"></div>
+            </section>
+
+            <section class="section--page">
+                <h2>Side Projects</h2>
+
+                <div class="card--project">
+                    <a href="https://www.npmjs.com/package/jseassy" target="_blank"><span>🏆 </span>Npm Package</a>
+                </div>
+
+                <div class="card--project">
+                    <a href="https://github.com/bhumit070/cli-resume" target="_blank" ><span>🏆 </span>Cli Resume</a>
+                </div>
+
+                <div class="card--project">
+                    <a href="https://github.com/bhumit070/google-docs-clone" ><span>🏆 </span>Google Docs Clone</a>
+                </div>
+
+                <div class="card--project">
+                    <a href="https://github.com/bhumit070/generators"><span>🏆 </span>VsCode Extension</a>
+                </div>
+
+            </section>
+        </div>
+        <script defer>
+            const experienceYearSpan = document.querySelector('#experience-years');
+            const currentDate = new Date()
+            const startingDate = new Date(2020, 11, 17); // 17 december 2020
+            // find years of gap in current date in starting date
+            let yearsOfExperience = (currentDate.getFullYear() - startingDate.getFullYear()) - 1;
+            const currentMonth = currentDate.getMonth();
+            console.log(currentMonth, 'currentMonth')
+            if(currentMonth === 11) {
+                yearsOfExperience += 1;
+            } else {
+                yearsOfExperience = `${yearsOfExperience}.${currentMonth+1}`;
+            }
+            experienceYearSpan.innerText = yearsOfExperience;
+        </script>
+    </body>
+</html>
