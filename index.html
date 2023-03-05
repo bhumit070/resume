@@ -3,11 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Bhoomit Ganatra</title>
         <meta property="og:title" content="Bhoomit Ganatra's Resume" />
         <meta property="og:image" content="https://bhumit070.github.io/resume/assets/images/profile_pic.JPG" />
         <meta property="og:description" content="Resume of Bhoomit Ganatra Software Engineer"  />
+
+        <title>Bhoomit Ganatra</title>
+
         <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+        <script src="./js/experience_calc.js" defer></script>
     </head>
     <body>
         <div id="container--main">
@@ -44,12 +49,45 @@
                 <h2>Tech stack & Tools</h2>
 
                 <div id="wrapper--techstack__items">
-                    <div class="card--techstack"><span>JavaScript, Typescript, NodeJS</span></div>
-                    <div class="card--techstack"><span>Express, NestJs</span></div>
-                    <div class="card--techstack"><span>Postgres, MongoDB, MySQL</span></div>
-                    <div class="card--techstack"><span>Docker</span></div>
-                    <div class="card--techstack"><span>React, Vue, Nuxt</span></div>
-                    <div class="card--techstack"><span>Vim, VsCode, Postman</span></div>
+                    <div class="card--techstack" title="Programming Languages">
+                        <span>
+                            <i class="devicon-typescript-plain colored devicon" title="Typescript"></i>
+                            <i class="devicon-javascript-plain colored devicon" title="Javascript"></i>
+                            <i class="devicon-nodejs-plain colored devicon" title="NodeJs"></i>
+                        </span>
+                    </div>
+                    <div class="card--techstack" title=Frameworks>
+                        <span>
+                            <i class="devicon-express-original colored devicon" title="Express Js"></i>
+                            <i class="devicon-nestjs-plain colored devicon"     title="Nest Js"></i>
+                        </span>
+                    </div>
+                    <div class="card--techstack" title="Databases">
+                        <span>
+                            <i class="devicon-postgresql-plain-wordmark colored devicon" title="Postgres"></i>
+                            <i class="devicon-mongodb-plain-wordmark colored devicon" title="MongoDB"></i>
+                            <i class="devicon-mysql-plain-wordmark colored devicon" title="MySQL"></i>
+                            <i class="devicon-redis-plain-wordmark colored devicon" title="Redis"></i>
+                        </span>
+                    </div>
+                    <div class="card--techstack" title="DevOps">
+                        <span>
+                            <i class="devicon-docker-plain-wordmark colored devicon" title="Docker"></i>
+                        </span>
+                    </div>
+                    <div class="card--techstack" title="Frontend Frameworks">
+                        <span>
+                            <i class="devicon-react-original-wordmark colored devicon" title="React"></i>
+                            <i class="devicon-vuejs-line-wordmark devicon" title="Vue"></i>
+                            <i class="devicon-nuxtjs-plain devicon" title="Nuxt"></i>
+                        </span>
+                    </div>
+                    <div class="card--techstack" title="Editors">
+                        <span>
+                            <i class="devicon-vscode-plain-wordmark colored devicon" title="VsCode"></i>
+                            <i class="devicon-vim-plain colored devicon" title="Vim"></i>
+                        </span>
+                    </div>
                 </div>
             </section>
 
@@ -63,7 +101,6 @@
                     <p>Worked on different different projects as per client requirement.</p>
                     <ul>
                         <li>Created <b>admin panel</b> backend for a <b> 2d shooter game </b> + Logic for <b> earning system </b> for that game</li>
-                        <li> Worked with <b> MicroServices </b> based application with <b>nodejs</b> and <b>typescript</b> </li>
                         <li>Write frontend Logics for a <b>rental app</b> in <b>vue js</b>.</li>
                         <li> Worked on <b>existing backend</b> for an application (<b>PERN stack</b>) & modify <b>admin panel</b> built in react. </li>
                     </ul>
@@ -108,20 +145,5 @@
 
             </section>
         </div>
-        <script defer>
-            const experienceYearSpan = document.querySelector('#experience-years');
-            const currentDate = new Date()
-            const startingDate = new Date(2020, 11, 17); // 17 december 2020
-            // find years of gap in current date in starting date
-            let yearsOfExperience = (currentDate.getFullYear() - startingDate.getFullYear()) - 1;
-            const currentMonth = currentDate.getMonth();
-            console.log(currentMonth, 'currentMonth')
-            if(currentMonth === 11) {
-                yearsOfExperience += 1;
-            } else {
-                yearsOfExperience = `${yearsOfExperience}.${currentMonth+1}`;
-            }
-            experienceYearSpan.innerText = yearsOfExperience;
-        </script>
     </body>
 </html>
